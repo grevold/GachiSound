@@ -4,7 +4,7 @@
     <title>Audio</title>
     <style>
       .main {
-        margin: 0 auto;
+        margin: auto;
         height: 800px;
         width: 500px;
       }
@@ -17,6 +17,9 @@
         width: 100px;
         height: 100px;
         background-color: rgb(255, 255, 255);
+      }
+      .pad:active {
+        background-color: rgb(104, 141, 237); /* например, хотим сделать, чтобы кнопка подсвечивалась красным цветом при клике*/
       }
     </style>
   </head>
@@ -46,7 +49,6 @@
     <script>
       let button1 = document.querySelector("#button1");
       button1.addEventListener("click", function play() {
-      button1.style.background = "rgb(112, 134, 235)";
         let newAudio = new Audio();
         newAudio.src = "./Sounds/Gachi/300 bucks.mp3";
         newAudio.play();
